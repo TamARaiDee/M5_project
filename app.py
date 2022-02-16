@@ -1,4 +1,4 @@
-from cProfile import label
+from cProfile
 from tkinter import *
 from tkinter import Frame, Label, filedialog, Text
 from PIL import Image, ImageTk
