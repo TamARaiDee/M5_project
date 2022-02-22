@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import Frame, Label, filedialog, Text
+from tkinter.ttk import *
 from PIL import Image, ImageTk
 import os
 import shutil
@@ -91,5 +92,5 @@ cancel_img_button.pack_forget()
 yes_button = Button(root, text="yes", command=lambda:[destroy_frame(), select_folder()] )
 yes_button.pack_forget()
 
-#loop program always lowest
+#loop program alway
 root.mainloop()
