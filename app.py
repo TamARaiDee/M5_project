@@ -1,9 +1,15 @@
 from tkinter import *
 from tkinter import Frame, Label, filedialog, Text
 from tkinter.ttk import *
+
+#import for use with image
 from PIL import Image, ImageTk
 import os
+
+#function for copy file
 import shutil
+#import for find this file directory
+import subprocess
 
 #create program with Tk function name root
 root = Tk()
@@ -13,6 +19,16 @@ root.title("App No.1")
 
 #window screen w x h
 root.geometry("500x500")
+
+#find import for find this file directory
+#def find_files(file_name):
+#    command = ['locate', file_name]
+#    global search_results
+#    output = subprocess.Popen(command, stdout=subprocess.PIPE).communicate()[0]
+#   output = output.decode()
+
+#    search_results = output.split('\n')
+
 
 #Add photo to frame and copy file to selected folder 
 def Addphoto():
