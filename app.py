@@ -9,7 +9,7 @@ import os
 #function for copy file
 import shutil
 #import for find this file directory
-import subprocess
+#import subprocess
 
 #create program with Tk function name root
 root = Tk()
