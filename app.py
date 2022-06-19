@@ -10,6 +10,12 @@ import shutil
 #import for find this file directory
 #import subprocess
 
+#get current file directory
+project_directory = os.path.dirname(os.path.realpath(__file__))
+
+#destination to save picture
+destination = project_directory+"\known.jpg"
+
 #create program with Tk function name root
 root = Tk()
 
@@ -39,9 +45,9 @@ def Addphoto():
     #print file directory in command line
     print(filedirectory)
 
-    #copy file from filedirectory to /home/tatr/Project......
-    shutil.copy(filedirectory, r'C:\Users\OWNER\Desktop\WORK\M5 proj\known.jpg' )
-    cimg = r'C:\Users\OWNER\Desktop\WORK\M5 proj\known.jpg'
+    #copy file from filedirectory to destination
+    shutil.copy(filedirectory, destination )
+    cimg = destination
 
     #add text
     label_t = Label(frame, text = "You choose this photo?")
@@ -50,7 +56,7 @@ def Addphoto():
     label_t2.pack()
 
     #show photo
-    #watch in /home/tatar/Project/medel1/photo_test.py
+    #watch in file directory
     image = Image.open(cimg)
     zoom = 0.2
     pixels_x, pixels_y = tuple([int(zoom*x)for x in image.size])
@@ -68,7 +74,7 @@ def Addphoto():
 def cancel_img():
 
     #remove file at cimg
-    cimg = r'C:\Users\OWNER\Desktop\WORK\M5 proj\known.jpg'
+    cimg = destination
     os.remove(cimg)
     cancel_img_button.pack_forget()
     recive_face_button.pack()
