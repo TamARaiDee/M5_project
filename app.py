@@ -1,6 +1,5 @@
 from tkinter import *
 from tkinter import Frame, Label, filedialog, Text
-from tkinter.ttk import *
 
 #import for use with image
 from PIL import Image, ImageTk
